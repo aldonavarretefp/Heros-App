@@ -7,7 +7,7 @@ export const HeroCard = ({id,superhero,publisher,alter_ego,characters,first_appe
     const imagePath = `/assets/${id}.jpg`;
 
     return (
-        <div className="col">
+        <div className="col mb-4">
             <div className="card bg-dark text-white imgCard">
                 <img src={imagePath} className={"card-img imgHero"} alt={superhero}/>
                 <div className="card-img-overlay">
