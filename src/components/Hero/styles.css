@@ -1,0 +1,22 @@
+/* Hover image, opacity */
+
+.card:hover{
+  cursor: pointer;
+}
+.card:hover .imgHero{
+  opacity: 0.2 ;
+  transition: cubic-bezier(0.47, 0, 0.745, 0.715) 0.3s;
+}
+.card .card-text, .card .btn , .card .card-title{
+  visibility: hidden;
+}
+.card:hover .card-text, .card:hover .btn , .card:hover .card-title{
+  visibility: visible;
+}
+.card:hover .card-img-overlay{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
