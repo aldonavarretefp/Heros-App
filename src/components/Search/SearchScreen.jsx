@@ -6,6 +6,8 @@ import queryString from 'query-string';
 import { useMemo } from 'react';
 
 
+import 'animate.css';
+
 export const SearchScreen = () => {
     const location = useLocation();
     const navigate = useNavigate();
@@ -19,7 +21,6 @@ export const SearchScreen = () => {
     const { searchText } = values;
     const heroes = useMemo(() => getHerosByName(q), [q]);
     
-
     const handleSearch = (e)=>{
         e.preventDefault();
         navigate(`?q=${searchText}`);
@@ -27,15 +28,15 @@ export const SearchScreen = () => {
 
     return (
         <>
-            <h1>Search Screen</h1>
+            <h1 className='display-1'>Search Screen</h1>
             <hr/>
             <div className="row">
-                <div className="col-5">
+                <div className="col-5 animate__animated animate__fadeInLeft">
                     <form className="d-flex" onSubmit={handleSearch}>
                         <input 
                             className="form-control me-2" 
                             type="search" 
-                            placeholder="Search" 
+                            placeholder="Batman" 
                             autoComplete='off'
                             name="searchText"
                             value={searchText}
@@ -44,7 +45,7 @@ export const SearchScreen = () => {
                         <button className="btn btn-outline-primary" type="submit">Search</button>
                     </form>
                 </div>
-                <div className="col-7 text-center">
+                <div className="col-7 text-center animate__animated animate__fadeInRight">
                     <h4>Search Result</h4>
                     <hr/>
                     <ul className="list-group">
@@ -52,11 +53,11 @@ export const SearchScreen = () => {
                         {
                             q==='' 
                                 &&
-                            <div className="alert alert-info">Search a hero</div>
+                            <div className="alert alert-info ">Search a hero</div>
                         }
                         {
                             q!=='' && heroes.length===0 &&
-                            <div className="alert alert-danger">No results</div>
+                            <div className="alert alert-danger animate__animated animate__fadeIn">No results</div>
                         }
 
                         {
