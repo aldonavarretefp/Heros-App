@@ -5,7 +5,7 @@ import 'animate.css'
 export const MarvelScreen = () => {
     return (
         <>
-            <h1 className='display-1 animate__animated animat'>Marvel SuperHeroes</h1>
+            <h1 className='display-1 '>Marvel SuperHeroes</h1>
             <hr/>
             <HeroList publisher='Marvel Comics'/>
         </>
