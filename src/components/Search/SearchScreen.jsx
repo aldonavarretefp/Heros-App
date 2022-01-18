@@ -28,21 +28,28 @@ export const SearchScreen = () => {
 
     return (
         <>
-            <h1 className='display-1'>Search Screen</h1>
+            <h1 className='display-1 normal'>Search Screen</h1>
             <hr/>
             <div className="row">
                 <div className="col-5 animate__animated animate__fadeInLeft">
-                    <form className="d-flex" onSubmit={handleSearch}>
-                        <input 
-                            className="form-control me-2" 
-                            type="search" 
-                            placeholder="Batman" 
-                            autoComplete='off'
-                            name="searchText"
-                            value={searchText}
-                            onChange={handleInputChange}
-                            />
-                        <button className="btn btn-outline-primary" type="submit">Search</button>
+                    <form onSubmit={handleSearch}>
+                        <div className="row">
+                            <div className="col-12 mt-md-2 col-md-8 col-lg-8 col-xl-8">
+                                <input 
+                                    className="form-control me-1" 
+                                    type="search" 
+                                    placeholder="Batman" 
+                                    autoComplete='off'
+                                    name="searchText"
+                                    value={searchText}
+                                    onChange={handleInputChange}
+                                    />
+
+                            </div>
+                            <div className="col mt-2 col-md-4 col-lg-4 col-xl-4 ">
+                                <button className="btn btn-outline-primary" type="submit">Search</button>
+                            </div>
+                        </div>
                     </form>
                 </div>
                 <div className="col-7 text-center animate__animated animate__fadeInRight">

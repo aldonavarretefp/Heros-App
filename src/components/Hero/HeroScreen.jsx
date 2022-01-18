@@ -32,7 +32,7 @@ export const HeroScreen = () => {
 
     return (
         <div className="row mt-5">
-            <div className="col text-center animate__animated animate__slideInLeft ">
+            <div className="col-12 col-sm-6 col-md-6 col-lg-6 col-xxl-6 col-xl-6 text-center animate__animated animate__slideInLeft ">
                 <img
                     src={imgPath}
                     alt={id}

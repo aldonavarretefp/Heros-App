@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../auth/authContext';
 import { types } from '../../types/index';
 
+import 'animate.css'
 export const LoginScreen = () => {
     const navigate = useNavigate();
 
@@ -25,7 +26,7 @@ export const LoginScreen = () => {
 
     }
     return (
-        <div className='container mt-5'>
+        <div className='container mt-5 animate__animated animate__fadeIn'>
            <h1>Login Screen</h1> 
            <hr/>
            <button 
