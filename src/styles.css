@@ -30,3 +30,10 @@ h1.normal{
     
 }
 
+
+@media (prefers-reduced-motion: reduce) {
+    .collapsing {
+        transition-property: height, visibility;
+        transition-duration: 0.35s;
+    }
+}
